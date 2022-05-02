@@ -2,6 +2,7 @@
   "name": "5-3-react-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://seyaryu.github.io/5-3-React-Portfolio/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
