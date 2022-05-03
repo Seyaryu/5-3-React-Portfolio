@@ -25,6 +25,77 @@ header li:hover {
   color: orange;
 }
 
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
 
 h1 {
   font-size: 2.5em; 
@@ -95,7 +166,6 @@ header span:hover {
   height:auto;
 
 }
-
 
 .amCard {
 
@@ -310,9 +380,101 @@ footer a:hover {
   100% { transform: rotate(0.0deg) }
 }
 
+.formCard {
+
+  padding: 2em;
+  display: flex;
+  color:black;
+
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #5585b5;
+}
+
+.form {
+  margin: 30px;
+  max-width: 800px;
+}
+
+.form input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+@media (max-width: 700px) {
+    #logo h1 {
+      font-size: 8vw;
+  }
+  .profilePic > img {
+      width: 320px;
+  }
+  .exp {
+
+      width: 30em;
+  }
+  #experience {
+      margin-top: 1em;
+  }
+  .exp {
+      width: 80%;
+  }
+  .image {
+      width: 455px;
+      height: auto;
+  }
+
+  footer p {
+    width:60px;
+    font-size: 6vw;
+  }
+
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
 
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
 
   header {
       font-size: smaller;
@@ -334,4 +496,4 @@ footer a:hover {
       width: 455px;
       height: auto;
   }
-}
+} */

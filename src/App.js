@@ -9,7 +9,7 @@ function App() {
       <div className="header">
         <Header />
       </div>
-      <div>
+      <div className='amCard'>
         <Project />
       </div>
       <div className="footer">

@@ -20,6 +20,16 @@ const projects = [
         title: "Weather Dashboard",
         image: "/images/img4.PNG",
         url: "https://seyaryu.github.io/1-25-Homework/"
+    },
+    {   
+        title: "Dispatch Log (Work in progress)",
+        image: "/images/img5.PNG",
+        url: "https://seyaryu.github.io/Dispatch_Log/"
+    },
+    {
+        title: "Text Editor (Work in progress)",
+        image: "",
+        url: "https://dashboard.heroku.com/apps/pwa-text-editor-4-26"
     }
 ]
 
