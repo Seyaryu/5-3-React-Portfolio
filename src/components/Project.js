@@ -34,7 +34,7 @@ const projects = [
 ]
 
 function Project() {
-    var allCards = [<h2><a id="projects">Projects</a></h2>]
+    var allCards = [<h2><a href='project' id="projects">Projects</a></h2>]
         for(let i=0; i< projects.length; i++) {
             const newCard = 
             <div className="card">
